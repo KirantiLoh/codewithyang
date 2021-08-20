@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="contact-form-ct">
+<p id="get-in-touch-ct">Get In Touch</p>
+<div class="contact-container-ct">
+    <form method="POST">
+    {% csrf_token %}
+    <div class="inputs">
+    <input type="text" name="name" placeholder="Name" required id="name-field">
+    <input type="email" name="email" placeholder="Email" required id="email-field">
+    <textarea placeholder="Message me anything" name="message" required id="message-field"></textarea>
+    </div>
+    <div id="send-email-btn">
+    <input type="submit" value="Send" id="send-email-btn-content">
+    </div>
+    </form>
+    <div class="contact-detail-ct">
+    <p>Connect with me</p>
+    <p>For support or any question, email me at mauriceyangmy28@gmail.com</p>
+    </div>
+    </div>
+    </div>
+{% if sender %}
+<p hidden id="sender">{{sender}}</p>
+{% endif %}
+{% endblock %}

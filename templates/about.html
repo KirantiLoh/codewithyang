@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="personal-desc">
+<div class="description">
+<p id="desc-name">Hi! My name is Maurice Yang</p>
+<p id="desc-desc">Maurice is a web developer who has 1 year of experience in making websites using Django. Has 4 years of coding experience in total and 1 year specializing in making websites</p>
+</div>
+<div id="image-border">
+<img src={% static 'images\maurice.png' %} >
+</div>
+</div>
+<hr>
+<div class="skill-services">
+<div class="skill-container">
+<h1>Skills</h1>
+<div class="skills">
+<canvas id="skill-chart" width="500" height="500"></canvas>
+</div>
+</div>
+<div class="services">
+<p>Services I Provide</p>
+<ul>
+<li><i class="fas fa-code"></i> Fullstack Development using HTML, CSS, JS, and Django</li>
+<li><i class="fab fa-css3-alt"></i> Website Design</li>
+<li><i class="fab fa-python"></i> Backend Development</li>
+</ul>
+</div>
+</div>
+<hr>
+<div class='project-container'>
+<p id="project-text">Projects I've Enrolled in</p>
+<ul class="projects">
+{% for project in projects %}
+<div class="project">
+<img src={{project.image.url}} class="project-img">
+<div class="project-detail">
+<p id="project-title">{{project.name}}</p>
+<a href={% url 'Project Detail' project.id %} class="visit-project">More Details</a>
+</div>
+</div>
+{% endfor %}
+</ul>
+</div>
+<div class="contact-form">
+<p id="get-in-touch">Get In Touch</p>
+<div class="contact-container">
+    <form method="POST">
+    {% csrf_token %}
+    <div class="inputs">
+    <input type="text" name="name" placeholder="Name" required id="name-field">
+    <input type="email" name="email" placeholder="Email" required id="email-field">
+    <textarea placeholder="Message me anything" name="message" required id="message-field"></textarea>
+    </div>
+    <div id="send-email-btn">
+    <input type="submit" value="Send" id="send-email-btn-content">
+    </div>
+    </form>
+    <div class="contact-detail">
+    <p>Connect with me</p>
+    <p>For support or any question, email me at mauriceyangmy28@gmail.com</p>
+    </div>
+    </div>
+    </div>
+{% endblock content %}

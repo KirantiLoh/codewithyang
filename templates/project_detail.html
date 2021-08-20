@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="project-detail-page">
+<p id="project-title">{{project.name}}</p>
+<hr>
+<div id="project-img">
+<img src={{project.image.url}}>
+</div>
+<p id="project-detail-desc">{{project.desc}}</p>
+<a href={{project.link}} class="visit-project">Visit Site</a>
+</div>
+{% endblock %}

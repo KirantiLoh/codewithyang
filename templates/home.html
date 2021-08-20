@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+<meta charset="UTF-8">
+    <meta name="description" content="Hi, I'm Maurice Yang. I'm an aspiring fullstack web developer who specializes in django">
+    <meta name="keywords" content="Code, ">
+    <meta name="author" content="Maurice Yang">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code With Yang</title>
+    <link rel="icon" href={% static 'images\CWY.ico' %} type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href={% static 'css/style.css' %}>
+</head>
+
+<body>
+<header id='home-nav'>
+        <p id="home-logo">Code With Yang</p>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-menu-btn">
+        <i class="fas fa-bars"></i>
+        </label>
+        <ul class="home-nav-links">
+            <a href={% url 'Home' %}><i class="fas fa-home"></i> Home</a>
+            <a href={% url 'About' %}><i class="fas fa-user"></i> About</a>
+            <a href={% url 'Contact' %}><i class="fas fa-address-card"></i> Contact Me</a>
+            <label for="chk" class="hide-menu-btn">
+                <i class="fas fa-times"></i>
+            </label>
+        </ul>
+    </header>
+<div class="fullscreen">
+    <img src={% static 'images\PWbackground.png' %}>
+        <div class="intro">
+            <div id="name">
+                <p>My name is Maurice Yang</p>
+            </div>
+            <div id="work">
+                <p id="occupation">I'm a Web Developer</p>
+            </div>
+            <a href={% url 'About' %} id="know">Know me better</a>
+        </div>
+</div>
+<footer>
+<p>&copy Code With Yang, 2021</p>
+
+<div class="sosmed">
+<a href="//www.instagram.com/maurice_yang" class="fab fa-instagram" target="blank"></a>
+<a href="//www.linkedin.com/in/maurice-y-66b9a9219" class="fab fa-linkedin" target="blank"></a>
+</div>
+</footer>
+<script src={% static 'js\script.js' %}></script>
+</body>
+
+</html>
