@@ -1,8 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Project
-from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
-from .forms import ContactForm
 from django.core.mail import send_mail
+from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
 def home_view(request):
@@ -28,5 +27,11 @@ def contact_view(request):
     return render(request, "contact.html")
 
 def project_detail_view(request, id):
-    project = Project.objects.get(id = id)
-    return render(request, "project_detail.html", {"project" : project})
+    try:
+        project = Project.objects.get(id = id)
+        return render(request, "project_detail.html", {"project" : project})
+    except ObjectDoesNotExist:
+        return redirect("Error")
+
+def error_page(request):
+    return render(request, "error.html")
