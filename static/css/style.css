@@ -557,11 +557,12 @@ footer p {
 
 #back {
     padding: 10px 20px;
-    margin: 0 10px;
+    margin: 5px 10px;
     background-color: transparent;
     border: 3px #fff solid;
     transition: .3s;
     color: #fff;
+    text-decoration: none;
 }
 
 #back:hover {
