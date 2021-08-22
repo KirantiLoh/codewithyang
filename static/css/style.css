@@ -527,6 +527,48 @@ footer p {
     padding: 10px 20px;
 }
 
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    color: #fff;
+}
+
+#apology {
+    position: relative;
+    width: 500px;
+    height: 100%;
+}
+
+#apology img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-links {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#back {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: transparent;
+    border: 3px #fff solid;
+    transition: .3s;
+    color: #fff;
+}
+
+#back:hover {
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+
 @media screen and (max-width:900px) {
     .personal-desc,
     .skill-container {
@@ -681,6 +723,9 @@ footer p {
     #name-field,
     #email-field,
     #message-field {
+        width: 250px;
+    }
+    #apology {
         width: 250px;
     }
 }

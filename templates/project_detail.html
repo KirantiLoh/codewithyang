@@ -8,6 +8,9 @@
 <img src={{project.image.url}}>
 </div>
 <p id="project-detail-desc">{{project.desc}}</p>
+<div class="project-links">
 <a href={{project.link}} class="visit-project">Visit Site</a>
+<a href={% url 'About' %} id="back">Back to Home?</a>
+</div>
 </div>
 {% endblock %}

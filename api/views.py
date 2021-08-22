@@ -33,5 +33,5 @@ def project_detail_view(request, id):
     except ObjectDoesNotExist:
         return redirect("Error")
 
-def error_page(request):
-    return render(request, "error.html")
+def error_page(request, *args):
+    return render(request, "error404.html")
