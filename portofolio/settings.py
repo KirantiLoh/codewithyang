@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+from typing import cast
 import django_heroku
 import dj_database_url
 from decouple import config
@@ -24,10 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.getenv("DEBUG"))
+DEBUG = config("DEBUG", cast=bool)
 
 ALLOWED_HOSTS = ["codewithyang.herokuapp.com"]
 
@@ -149,8 +150,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = "587"
-EMAIL_HOST_USER = os.getenv("email_host")
-EMAIL_HOST_PASSWORD = os.getenv("email_pass")
+EMAIL_HOST_USER = config("email_host")
+EMAIL_HOST_PASSWORD = config("email_pass")
 EMAIL_USE_TLS = True
 
 django_heroku.settings(locals())
