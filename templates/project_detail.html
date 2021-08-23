@@ -5,12 +5,12 @@
 <p id="project-title">{{project.name}}</p>
 <hr>
 <div id="project-img">
-<img src={{project.image.url}}>
+<img src="{{project.image.url}}">
 </div>
 <p id="project-detail-desc">{{project.desc}}</p>
 <div class="project-links">
-<a href={{project.link}} class="visit-project">Visit Site</a>
-<a href={% url 'Home' %} id="back">Back to Home?</a>
+<a href="{{project.link}}" class="visit-project">Visit Site</a>
+<a href="{% url 'Home' %}" id="back">Back to Home?</a>
 </div>
 </div>
 {% endblock %}

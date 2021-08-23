@@ -7,7 +7,7 @@
 <p id="desc-desc">Maurice is a web developer who has 1 year of experience in making websites using Django. Has 4 years of coding experience in total and 1 year specializing in making websites</p>
 </div>
 <div id="image-border">
-<img src={% static 'images\maurice.png' %} >
+<img src="{% static 'images\maurice.png' %}">
 </div>
 </div>
 <hr>
@@ -33,10 +33,10 @@
 <ul class="projects">
 {% for project in projects %}
 <div class="project">
-<img src={{project.image.url}} class="project-img">
+<img src="{{project.image.url}}" class="project-img">
 <div class="project-detail">
 <p id="project-title">{{project.name}}</p>
-<a href={% url 'Project Detail' project.id %} class="visit-project">More Details</a>
+<a href="{% url 'Project Detail' project.id %}" class="visit-project">More Details</a>
 </div>
 </div>
 {% endfor %}

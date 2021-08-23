@@ -9,9 +9,9 @@
     <meta name="author" content="Maurice Yang">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code With Yang</title>
-    <link rel="icon" href={% static 'images\CWY.ico' %} type="image/x-icon">
+    <link rel="icon" href="{% static 'images\CWY.ico' %}" type="image/x-icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link rel="stylesheet" href={% static 'css/style.css' %}>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
@@ -22,9 +22,9 @@
         <i class="fas fa-bars"></i>
         </label>
         <ul class="nav-links">
-            <a href={% url 'Home' %}><i class="fas fa-home"></i> Home</a>
-            <a href={% url 'About' %}><i class="fas fa-user"></i> About</a>
-            <a href={% url 'Contact' %}><i class="fas fa-address-card"></i> Contact Me</a>
+            <a href="{% url 'Home' %}"><i class="fas fa-home"></i> Home</a>
+            <a href="{% url 'About' %}"><i class="fas fa-user"></i> About</a>
+            <a href="{% url 'Contact' %}"><i class="fas fa-address-card"></i> Contact Me</a>
             <label for="chk" class="hide-menu-btn">
                 <i class="fas fa-times"></i>
             </label>
@@ -35,7 +35,7 @@
     </div>
     
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
-    <script src={% static 'js\script.js' %}></script>
+    <script src="{% static 'js\script.js' %}"></script>
 </body>
 
 </html>

@@ -4,9 +4,9 @@
 <div class="error-page">
 <p class="404-title">404 Not Found</p>
 <div id="apology">
-<img src={% static 'images\apology.png' %}>
+<img src="{% static 'images\apology.png' %}">
 </div>
 <p>The page you're trying to search is not found...</p>
-<a href={% url 'Home' %} id="back">Back to Home?</a>
+<a href="{% url 'Home' %}" id="back">Back to Home?</a>
 </div>
 {% endblock %}
