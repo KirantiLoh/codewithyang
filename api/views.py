@@ -22,7 +22,7 @@ def contact_view(request):
         name = request.POST["name"]
         email = request.POST["email"]
         message = request.POST["message"]
-        send_mail(subject=name + ", from : " + email, message=message, from_email=email, recipient_list=["mauriceyangmy28@gmail.com"])
+        send_mail(subject=name + ", from : " + email, message=email + " sent you :  " + message, from_email=email, recipient_list=["mauriceyangmy28@gmail.com"])
         return redirect("About")
     return render(request, "contact.html")
 
