@@ -536,10 +536,15 @@ footer p {
     color: #fff;
 }
 
+.error-title {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
 #apology {
     position: relative;
     width: 500px;
-    height: 100%;
+    height: 500px;
 }
 
 #apology img {
@@ -728,6 +733,7 @@ footer p {
     }
     #apology {
         width: 250px;
+        height: 250%;
     }
 }
 
