@@ -7,5 +7,7 @@ urlpatterns = [
     path('contact', views.contact_view, name="Contact"),
     path('project/<int:id>', views.project_detail_view, name="Project Detail"),
     path('error', views.error_page, name="Error"),
+    path("about/<str:random_string>", views.error_redirect, name="About Error Redirect"),
+    path("contact/<str:random_string>", views.error_redirect, name="Contact Error Redirect"),
     path("<str:random_string>", views.error_redirect, name = "Error Redirect")
 ]
