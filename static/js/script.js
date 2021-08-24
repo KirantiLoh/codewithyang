@@ -4,8 +4,8 @@ const menu_chk = document.getElementById("chk");
 
 const skill_canv = document.getElementById("skill-chart");
 
-let fname = document.getElementById("fname");
-let lname = document.getElementById("lname");
+let name_field = document.getElementById("name-field");
+let email_field = document.getElementById("email-field");
 const send_email_btn = document.getElementById("send-email-btn");
 
 const data = {
@@ -48,10 +48,10 @@ if (nav) {
 
 if (send_email_btn) {
     send_email_btn.addEventListener("click", function() {
-        if (fname && lname) {
-            console.log(fname);
-            console.loog(lname);
-            alert("Thanks " + fname + " " + lname + ", I will contact you shortly");
+        if (name_field.innerText !== "" && email_field.innerText !== "") {
+            console.log(name_field.innerText);
+            console.log(email_field.innerText);
+            alert("Thanks " + name_field.innerText + ", I will contact you shortly");
         }
     });
 }

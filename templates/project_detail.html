@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block title %}{{project.name}}{% endblock title %}
 {% block content %}
 <div class="project-detail-page">
 <p id="project-title">{{project.name}}</p>
