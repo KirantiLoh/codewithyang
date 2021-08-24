@@ -36,5 +36,5 @@ def project_detail_view(request, id):
 def error_page(request, *args):
     return render(request, "error404.html")
 
-def error_redirect(request, *args):
+def error_redirect(request, random_string):
     return redirect("Error")
