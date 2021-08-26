@@ -603,10 +603,6 @@ footer p {
     .project {
         width: 300px;
     }
-    .home-nav-links,
-    .nav-links {
-        display: none;
-    }
     .menu-btn {
         display: block;
         z-index: 3;
@@ -670,9 +666,6 @@ footer p {
     #chk:checked~.nav-links a:hover,
     #chk:checked~.home-nav-links:hover {
         border-bottom: 3px rgb(170, 26, 0) solid;
-    }
-    #chk:checked~.show-menu-btn {
-        display: none;
     }
     .contact-container {
         flex-direction: column;
