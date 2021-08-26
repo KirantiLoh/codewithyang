@@ -120,8 +120,7 @@ body {
     font-size: 1.25rem;
     padding: 10px;
     border: 3px #fff solid;
-    border-radius: 8px;
-    transition: cubic-bezier(.74, 1.58, .77, .42);
+    transition: .5s cubic-bezier(.74, 1.58, .77, .42);
     z-index: 2;
 }
 
