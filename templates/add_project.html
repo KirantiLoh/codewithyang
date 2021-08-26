@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Add Project{% endblock title %}
+{% load static %}
+{% block content %}
+<div class="add-project-container">
+<p id="add-p">Add New Project</p>
+<form method="POST">
+{{form.as_p}}
+<input type="submit" value="Publish">
+</form>
+</div>
+{% endblock %}

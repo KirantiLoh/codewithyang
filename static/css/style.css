@@ -586,6 +586,28 @@ footer p {
     color: rgb(0, 0, 0);
 }
 
+.add-project-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    margin-top: 5vh;
+    color: #fff;
+    text-align: center;
+    background-color: rgb(170, 26, 0);
+    border-radius: 10px;
+}
+
+#add-p {
+    font-size: 1.5rem;
+}
+
+.add-project-container form {
+    text-align: left;
+    padding: 10px 20px;
+}
+
 @media screen and (max-width:900px) {
     .personal-desc,
     .skill-container {
