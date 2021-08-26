@@ -115,18 +115,29 @@ body {
     text-decoration: none;
     position: relative;
     bottom: 0;
-    background-color: rgb(170, 26, 0);
+    background-color: transparent;
     color: whitesmoke;
     font-size: 1.25rem;
     padding: 10px;
-    border: 3px transparent solid;
+    border: 3px #fff solid;
     border-radius: 8px;
-    transition: 0.3s;
+    transition: cubic-bezier(.74, 1.58, .77, .42);
+    z-index: 2;
 }
 
-#know:hover {
-    border: 3px rgb(170, 26, 0) solid;
-    background-color: transparent;
+#know::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(170, 26, 0);
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+#know:hover::before {
+    height: 100%;
 }
 
 footer {
