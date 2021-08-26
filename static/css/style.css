@@ -134,6 +134,7 @@ body {
     height: 0;
     width: 100%;
     z-index: -1;
+    transition: .5s ease-out;
 }
 
 #know:hover::before {
@@ -644,6 +645,7 @@ footer p {
         justify-content: flex-start;
         overflow: auto;
         transition: 0.5s;
+        z-index: 4;
     }
     .home-nav-links a,
     .nav-links a {
