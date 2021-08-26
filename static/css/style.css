@@ -36,6 +36,7 @@ body {
     justify-content: space-around;
     list-style: none;
     padding: 10px 20px;
+    z-index: 4;
 }
 
 .home-nav-links a,
@@ -120,7 +121,7 @@ body {
     font-size: 1.25rem;
     padding: 10px;
     border: 3px #fff solid;
-    transition: .5s cubic-bezier(.74, 1.58, .77, .42);
+    transition: .5s ease-out;
     z-index: 2;
 }
 
